@@ -1,0 +1,133 @@
+<! DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body, div{
+    margin:0px; padding:0px;
+}
+body{
+    background-color:#eee;
+}
+ .c1{
+    border:3px #bb3627 outset;
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #efc9c5),
+    color-stop(50%, #bb3627), color-stop(50%, #d2594c), color-stop(100%, #f1998f));
+}
+.c2{
+    border:3px #4cd24c outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #c5efc5),
+    color-stop(50%, #4cd24c), color-stop(51%, #27bb27), color-stop(100%, #8ff18f));
+}
+.c3{
+    border:3px #4247d8 outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #d0d1f2),
+    color-stop(50%, #4247d8), color-stop(51%, #6f72db), color-stop(100%, #a6a9f4));
+}
+.c4{
+    border:3px #727272 outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #dadada),
+    color-stop(50%, #727272), color-stop(51%, #909090), color-stop(100%, #c1c1c1));
+}
+.c5{
+    border:3px #f355f3 outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fbd3fb),
+    color-stop(50%, #f355f3), color-stop(51%, #f47af4), color-stop(100%, #fcb2fc));
+}
+.c6{
+    border:3px #e1e1e1 outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff),
+    color-stop(50%, #f1f1f1), color-stop(51%, #e1e1e1), color-stop(100%, #f6f6f6));
+}
+.c7{
+    border:3px #e9de07 outset;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fefaae),
+    color-stop(50%, #f1e831), color-stop(51%, #e9de07), color-stop(100%, #fbf35b));
+}
+#tb{
+    float:left;
+    border-spacing:0;
+    border:2px gray inset;
+}
+#tb td{
+    box-sizing:border-box;
+    width:24px;
+    height:24px;
+}
+#tb .htd{
+    width:0px;
+    height:0px;
+    padding:0px;
+    margin:0px;
+}
+#pan{
+    float:left;
+    width:124px;
+    height:100%;
+}
+#lab_lev, #lab_score{
+    margin-top:10px;
+    width:100%;
+    font-size:36px;
+    font-weight:bold;
+    color:rgb(192, 192, 192);
+    text-shadow:-4px -4px 8px black;
+    text-align:center;
+}
+#lev, #score{
+    text-align:center;
+    width:100%;
+    font-size:36px;
+    font-weight:bold;
+    text-shadow:-4px -4px 8px black;
+    color:red;
+}
+#pre{
+    margin:8px auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0, 0, 0.65)),  color-stop(100%, rgba(0, 0, 0, 0)));
+    border:1px gray inset;
+}
+#pre td{
+    box-sizing:border-box;
+    width:16px;
+    height:16px;
+}
+#ter{
+    margin:0px auto;
+    text-align:center;
+    overflow:hidden;
+    width:420px;
+    border:4px rgb(163, 126, 126) inset;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(125,126, 125, 1)), color-stop(100%, rgba(14, 14, 14, 1)));
+}
+#btn_pau, #btn_res{
+    margin-top:20px;
+    width:100px;
+    height:30px;
+    font-size:20px;
+    font-weight:bold;
+    color: rgb(128, 128, 128);
+    text-shadow: -2px -2px 0 #fff, 1px 1px 0 #333, 1px 1px 0 #444;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff),
+    color-stop(50%, #f1f1f1), color-stop(51%, #e1e1e1), color-stop(100%, #f6f6f6));
+}
+</style>
+<body>
+    <div id="ter">
+            <! --游戏操作区-->
+        <table id="tb"></table>
+            <! --操作区右边面板-->
+              <div id="pan">
+              <div id="lab_lev">等级</div>
+              <div id="lev">0</div>
+              <div id="lab_score">分数</div>
+              <div id="score">0</div>
+            <! --预览区-->
+              <table id="pre"></table>
+              <input type="button" id="btn_res" value="Reset" onclick="location.reload()" /><br>
+              <input type="button" id="btn_pau" value="Pause" onclick="javascript:this.value=['Start', 'Pause'][G.np=! G.np|0]" />
+              </div>
+    </div>
+</body>
+</html>
